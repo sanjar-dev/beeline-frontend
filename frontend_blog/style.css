@@ -3,16 +3,57 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    color: blue;
+}
+
+a {
+    color: white;
+}
+
 .container {
     padding: 12px 16px;
     margin: 16px;
-    background-color: lightblue;
+    background-color: lightgray;
+}
+
+.blog-links {
+    background-color: lightskyblue;
+    color: white;
+}
+.blog-links a {
+    text-decoration: none;
 }
 
 .main-headers {
     text-align: center;
 }
 
+.end-footer {
+    background-color: black;
+}
 .end-footer p {
+    color: white;
     margin: 4px 0;
+}
+
+.inline-test {
+    display: flex;
+    flex-direction: row;
+}
+
+.test-1, .test-2 {
+    margin: 0 4px;
+}
+
+.test-1 {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+}
+
+.test-2 {
+    width: 24px;
+    height: 24px;
+    background-color: green;
 }
