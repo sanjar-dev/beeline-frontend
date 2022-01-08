@@ -1,4 +1,0 @@
-Все задания находятся в репозитории GitHub на моем профиле.
-https://github.com/sanjar-dev/beeline-frontend
-
-- Касмамытов Санжар Нурэльдикович
