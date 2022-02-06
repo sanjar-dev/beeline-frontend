@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <div class="navbar">
@@ -19,14 +20,21 @@
         </div>
 
         <ul>
-            <li>Главная</li>
-            <li>Новинки</li>
-            <li>Скидки</li>
+            <li><i class="fas fa-home"></i></li>
+            <li><i class="fas fa-exclamation-circle"></i></li>
+            <li><i class="fas fa-percentage"></i></li>
         </ul>
     </div>
 
-    <div>
-        <div></div>
+    <div class="shop-showcase">
+        <div class="shop-slide">
+            <img src="assets/showcase/image1.jpg" alt="Кибер понедельник">
+        </div>
+        <div class="shop-slide">
+            <img src="assets/showcase/image2.jpg" alt="Кибер понедельник">
+        </div>
+        <a class="prev" onclick="plusSlides(-1);">&#10094;</a>
+        <a class="next" onclick="plusSlides(1);">&#10095;</a>
     </div>
 
     <div class="shop-category">
@@ -120,5 +128,34 @@
     <footer>
 
     </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("shop-slide");
+            // var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
